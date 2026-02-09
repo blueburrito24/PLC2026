@@ -12,13 +12,13 @@ function arrFunc(){
 
 function applicatorFunc(inpFunc, a, b, s){
     if(s=='s'){
-        const arr = inpFunc();        
-        let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        const arr = inpFunc(a, b);        
+        let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, a);
         return sum;
     }
     else{        
-        const arr = inpFunc();
-        let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        const arr = inpFunc(a, b);
+        let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, b);
         return sum/b;
     }
 }
